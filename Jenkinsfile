@@ -13,19 +13,19 @@ pipeline {
                 sleep 5
             }
         }
-          stage('Test') {
+        stage('Test') {
             steps {
                 sh 'mvn test'
                 sleep 5
             }
         }
-          stage('Deploy') {
+        stage('Deploy') {
             steps {
                 sh'Deploy Step'
                 sleep 10
             }
         }
-          stage('Docker') {
+        stage('Docker') {
             steps {
                 echo 'Image step'
             }
