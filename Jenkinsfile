@@ -10,18 +10,16 @@ pipeline {
                 sh 'mvn clean'
                 sh 'mvn install'
                 sh 'mvn package'
-                sleep 5
             }
         }
         stage('Test') {
             steps {
                 sh 'mvn test'
-                sleep 5
             }
         }
         stage('Deploy') {
             steps {
-                sh 'Deploy Step'
+                echo 'Deploy Step'
                 sleep 10
             }
         }
